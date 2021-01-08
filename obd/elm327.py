@@ -79,6 +79,7 @@ class ELM327:
 
     # used as a fallback, when ATSP0 doesn't cut it
     _TRY_PROTOCOL_ORDER = [
+        "A",  # SAE_J1939
         "6",  # ISO_15765_4_11bit_500k
         "8",  # ISO_15765_4_11bit_250k
         "1",  # SAE_J1850_PWM
@@ -88,7 +89,6 @@ class ELM327:
         "3",  # ISO_9141_2
         "4",  # ISO_14230_4_5baud
         "5",  # ISO_14230_4_fast
-        "A",  # SAE_J1939
     ]
 
     # 38400, 9600 are the possible boot bauds (unless reprogrammed via
